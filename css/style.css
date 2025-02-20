@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+header{
+    text-align: center;
+    padding: 30px 0;
+    border: 1px solid #000;
+    height: 250px;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.section{
+    margin: 80px;
+}
+
+.section li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+/* Styling the About Me Section */
+.about-me{
+    width: 350px;
+}
+
+.about-me h2{
+    margin-top: 15px;
+    font-size: 2em;
+}
+
+.about-me p{
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: justify;
+}
+
+
+/* Styling the Education Section */
+
+
+/* Styling the Interests Section */
+
+
+/* Styling the Skills Section */
+.section .skill-set{
+    display: flex;
+    justify-content:space-evenly;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.section .skill-set .skill{
+    margin-top: 20px;
+    border: #000 1px solid;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 1em;
+    height: 250px;
+    width: 250px;
+    cursor:default;
+}
+
+.section .skill-set .skill p{
+    margin: 10px 0px 15px 0px;
+    height: 10px;
+    font-weight: bold;
+}
+
+
+.section .skill-set .skill-html:hover{
+    background: #f16529;
+    color: white;
+    transition: .5s;
+}
+
+.section .skill-set .skill-html img{
+    filter: invert(20%) sepia(100%) saturate(5000%) hue-rotate(0deg) brightness(90%) contrast(100%);
+}
+
+.section .skill-set .skill-html:hover img{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+
+.section .skill-set .skill-css:hover{
+    background: #2965f1;
+    color: white;
+    transition: .5s;
+}
+
+.section .skill-set .skill-css img{
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
+}
+
+.section .skill-set .skill-css:hover img{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+
+.section .skill-set .skill-js:hover{
+    background: #f0db4f;
+    color: white;
+    transition: .5s;
+}
+
+.section .skill-set .skill-js img{
+    filter: invert(83%) sepia(96%) saturate(748%) hue-rotate(1deg) brightness(103%) contrast(103%);
+}
+
+.section .skill-set .skill-js:hover img{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+
+.section .skill-set .skill-sql:hover{
+    background: #00758f;
+    color: white;
+    transition: .5s;
+}
+
+.section .skill-set .skill-sql img{
+    filter: invert(20%) sepia(100%) saturate(5000%) hue-rotate(180deg) brightness(90%) contrast(100%);
+}
+
+.section .skill-set .skill-sql:hover img{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+
+.section .skill-set .skill-bootstrap:hover{
+    background: #563d7c;
+    color: white;
+    transition: .5s;
+}
+
+.section .skill-set .skill-bootstrap img{
+    filter: invert(20%) sepia(100%) saturate(5000%) hue-rotate(270deg) brightness(90%) contrast(100%);
+}
+
+.section .skill-set .skill-bootstrap:hover img{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+
+
+.section .skill-set .skill-python:hover{
+    background: linear-gradient(45deg, #306998, #306998, #FFD43B);
+    color: white;
+    transition: .5s;
+}
+
+
+.section .skill-set .skills-others{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    justify-content: space-evenly;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.section .skill-set .skills-others li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3px;
+    border: #000 1px solid;
+    border-radius: 5px;
+    height: 70px;
+    width: 70px;
+    cursor:default;
+}
+
+.section .skill-set .skills-others li:hover{
+    background: #f1ecec;
+    transition: .5s;
+}
+
+.section .skill-set .skills-others li:hover img{
+    font-size: 12px;
+    transition: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.section .skill-set .skills-others li p{
+    font-size: 12px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 60px;
+}
+
+.section .skill-set .skills-others li:hover p{
+    display:block;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Styling the Projects Section */
+
+
+/* Styling the Experience Section */
+
+
+/* Styling the Contact Section */
+
+
