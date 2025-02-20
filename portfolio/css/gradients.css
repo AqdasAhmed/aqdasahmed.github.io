@@ -1,0 +1,60 @@
+:root{
+    --blue-gradient: linear-gradient(135deg, #52e5e7 10%, #130cb7 100%);
+    --instagram-gradient: linear-gradient(120deg, blue 20%, deeppink 60%, yellow 99%);
+    --orange-gradient: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
+    --fab-gradient: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+    --cad-gradeient: linear-gradient(135deg, #79F1A4 10%, #0E5CAD 100%);
+    --red-gradient: linear-gradient(135deg, #ff0844 80%, #ffffffff 100%);
+    --green-gradient: linear-gradient(135deg, #0fd850 10%, #f9f047 100%);
+    --blue-radial-gradient: radial-gradient(135deg, #52e5e7 10%, #130cb7 100%);
+    --ffdd-gradient: linear-gradient(to bottom right, #FF512F, #DD2476);
+}
+
+.green-gradient{
+    background: var(--green-gradient);
+}
+
+.red-gradient{
+    background: var(--red-gradient);
+}
+
+.blue-gradient{
+    background: var(--blue-gradient);
+    color: white;
+}
+
+.blue-radial-gradient{
+    background: var(--blue-radial-gradient);
+}
+
+.orange-gradient{
+    background: var(--orange-gradient);
+}
+
+.fab-gradient{
+    background: var(--fab-gradient);
+}
+
+.cad-gradient{
+    background: var(--cad-gradeient);
+}
+
+.ffdd-gradient{
+    background: var(--ffdd-gradient);
+}
+
+.ffdd-gradient-round{
+    background: var(--ffdd-gradient);
+}
+
+.ffdd-gradient-text{
+    background: -webkit-linear-gradient( #FF512F, #DD2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*.ffdd-gradient-text:hover{
+    -webkit-background-clip: var(--ffdd-gradient);
+    -webkit-text-fill-color: #fff;
+/*    background: var(--ffdd-gradient);
+}*/
