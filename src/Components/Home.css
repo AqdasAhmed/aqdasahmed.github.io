@@ -1,0 +1,97 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); */
+  /* background: linear-gradient(135deg, #232946 0%, #1a223f 100%); */
+  background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
+  flex-wrap: wrap;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: box-shadow 0.4s, border-radius 0.4s, background 0.4s,
+    transform 0.7s cubic-bezier(0.4, 2, 0.6, 1);
+  transform: translateX(0) scale(1);
+  color: whitesmoke;
+}
+
+.home #myPic {
+  border-radius: 50%;
+  /* border-radius: 18px; */
+  /* box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+  background: radial-gradient(circle at 60% 40%, #e0e7ef 60%, #5bc0be 100%); */
+  background: radial-gradient(
+    circle at 60% 40%,
+    #fff 60%,
+    #5bc0be 100%,
+    #3a506b 120%
+  );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18),
+    0 0 0 8px rgba(91, 192, 190, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 24px;
+  transition: box-shadow 0.4s, border-radius 0.4s, background 0.4s, border 0.4s;
+}
+
+.home #myName {
+  font-size: 2.2rem;
+}
+
+.home #myProfiles {
+  font-size: 2rem;
+}
+
+.home #myProfiles span {
+  margin: 0 10px;
+}
+
+.home #myProfiles span a {
+  /* color: #2d3142; */
+  color: whitesmoke;
+}
+
+.home #myTitles {
+  display: flex;
+  flex-direction: row;
+}
+
+.home #myTitles #myTitle {
+  margin: 0 5px;
+  padding: 10px 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.home.scrolled {
+  transform: translateX(-1vw) translateY(0vh) scale(0.9);
+  border-radius: 32px;
+  width: 50vh;
+  height: 90vh;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.18);
+  background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
+  transition: all 0.7s cubic-bezier(0.4, 2, 0.6, 1);
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.home.scrolled #myName {
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  transition: color 0.4s;
+}
+
+.home.scrolled #myTitles {
+  flex-direction: row;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.home.scrolled #myTitles #myTitle {
+  margin: 5px;
+}

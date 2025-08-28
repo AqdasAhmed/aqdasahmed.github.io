@@ -1,0 +1,121 @@
+.contact {
+  transform: translateX(-1vw) translateY(0vh) scale(0.9);
+  border-radius: 32px;
+  width: 50vh;
+  height: 90vh;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.18);
+  background: whitesmoke;
+  transition: transform 1.5s cubic-bezier(0.4, 2, 0.6, 1),
+    box-shadow 0.7s cubic-bezier(0.4, 2, 0.6, 1),
+    border-radius 0.7s cubic-bezier(0.4, 2, 0.6, 1),
+    background 0.7s cubic-bezier(0.4, 2, 0.6, 1);
+  padding: 20px;
+  margin-left: 20px;
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact.gradient-border {
+  border: 2px solid transparent;
+  border-radius: 32px;
+  background-image: linear-gradient(whitesmoke, whitesmoke),
+    linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+}
+
+.contact .gradient-text {
+  background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact #myProfiles {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 0.1px #3a506b;
+}
+
+.contact #myProfiles span {
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.contact #myProfiles span a {
+  color: #3a506b;
+}
+
+#emailForm {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 50%;
+  color: #3a506b;
+}
+
+#emailForm input,
+#emailForm button {
+  width: 90%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: solid 0.1px #5bc0be;
+  float: left;
+  font-size: medium;
+}
+
+#emailForm textarea {
+  width: 93%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: solid 0.1px #5bc0be;
+  float: left;
+  resize: none;
+  font-size: large;
+}
+
+#emailForm input:focus,
+#emailForm textarea:focus {
+  border-color: #3a506b;
+  outline: none;
+  box-shadow: 0 0 6px rgba(59, 129, 246, 0.2);
+}
+
+#emailForm button {
+  display: flex;
+  background: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40%;
+  background: linear-gradient(135deg, #3a506b 0%, rgb(91, 192, 190) 100%);
+  color: whitesmoke;
+  float: left;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
+#emailForm button:hover {
+  transform: translateY(-3px); /* subtle lift effect */
+  box-shadow: 0 8px 20px rgba(91, 192, 190, 0.35); /* smoother shadow */
+}
+
+#formModal{
+  background: whitesmoke;
+  z-index: 30;
+  position: fixed;
+  justify-self: center;
+  align-self: center;
+}

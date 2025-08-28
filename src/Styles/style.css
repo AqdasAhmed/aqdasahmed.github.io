@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: poppins, sans-serif;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.back-to-top{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    z-index: 1;
+    bottom: 0;
+    right: 20px;
+    display: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+/* Customize scrollbar appearance */
+/* body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    display: none;
+    background-color: #888;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    display: block;
+    background-color: #555;
+}
+
+body {
+    overflow: auto;
+} */
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 0;
+    background: #fffdef;
+    border-radius: 30px;
+}
+
+.home img{
+    width: 10%;
+    height: 10%;
+    border-radius: 10%;
+    z-index: 2;
+}
+
+.quick-links{
+    position: fixed;
+    margin-top: 20px;
+    left: 60px;
+    top: 100px;
+    font-size: 14px;
+    line-height: 4;
+    z-index: 1;
+}
+
+.quick-links a{
+    color: black;
+}
+
+.skill-set{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+    margin: 10px 8px;
+    padding: 5px 15px;
+    border: solid thin black;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+/* .skill:hover{
+    box-shadow: gray 0px 5px 10px;
+    transition: box-shadow 0.3s ease-in-out;
+} */
+
+.skill .img {
+    font-size: 80px;
+}
+
+.skill p {
+    display: flex;
+    align-self: center;
+    font-size: 18px;
+}
+
+/* .skill.skill-python:hover{
+    background: linear-gradient(45deg, #306998, #306998, #FFD43B);
+    color: white;
+    transition: .5s;
+} */
+
+/* .skill.skill-others{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    justify-content: space-evenly;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.skill.skill-others li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3px;
+    padding: 1px;
+    border: #000 1px solid;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    cursor:default;
+}
+
+.skill.skill-others li img{
+    font-size: 12px;
+}
+
+.skill.skill-others li p{
+    font-size: 12px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 60px;
+} */
+
+/* Styling the Projects Section */
+
+
+/* Styling the Experience Section */
+
+
+/* Styling the Contact Section */
+
+
