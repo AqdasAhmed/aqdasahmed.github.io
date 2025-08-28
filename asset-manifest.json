@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/AqdasAhmed/aqdasahmed.github.io/static/css/main.f855e6bc.css",
-    "main.js": "/AqdasAhmed/aqdasahmed.github.io/static/js/main.89a149b4.js",
+    "main.css": "/AqdasAhmed/aqdasahmed.github.io/static/css/main.e82f585c.css",
+    "main.js": "/AqdasAhmed/aqdasahmed.github.io/static/js/main.d8c5103e.js",
     "static/js/453.efac9efe.chunk.js": "/AqdasAhmed/aqdasahmed.github.io/static/js/453.efac9efe.chunk.js",
+    "static/media/myPic2.png": "/AqdasAhmed/aqdasahmed.github.io/static/media/myPic2.4fa942c012f0a412c2f4.png",
     "static/media/logo.svg": "/AqdasAhmed/aqdasahmed.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/AqdasAhmed/aqdasahmed.github.io/index.html",
-    "main.f855e6bc.css.map": "/AqdasAhmed/aqdasahmed.github.io/static/css/main.f855e6bc.css.map",
-    "main.89a149b4.js.map": "/AqdasAhmed/aqdasahmed.github.io/static/js/main.89a149b4.js.map",
+    "main.e82f585c.css.map": "/AqdasAhmed/aqdasahmed.github.io/static/css/main.e82f585c.css.map",
+    "main.d8c5103e.js.map": "/AqdasAhmed/aqdasahmed.github.io/static/js/main.d8c5103e.js.map",
     "453.efac9efe.chunk.js.map": "/AqdasAhmed/aqdasahmed.github.io/static/js/453.efac9efe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.89a149b4.js"
+    "static/css/main.e82f585c.css",
+    "static/js/main.d8c5103e.js"
   ]
 }
