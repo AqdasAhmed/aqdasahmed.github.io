@@ -52,7 +52,7 @@ const About = () => {
     return (
         <div className='about' id="container">
             <div id='mySelf'>
-                <p style={{ fontSize: '1.8rem' }}>My Self</p>
+                <p>My Self</p>
                 <p>
                     Enthusiastic and dedicated Full-Stack Web Developer with an M.Sc in Information Technology from the University of Mumbai.
                 </p>

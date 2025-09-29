@@ -1,5 +1,4 @@
 .about {
-  max-width: 900px;
   margin: auto;
   padding: 40px 20px;
   font-family: "Segoe UI", sans-serif;
@@ -8,67 +7,72 @@
 }
 
 .about p {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #444;
 }
 
 #mySelf p:first-child {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 10px;
-  color: #222;
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.4;
 }
 
 #myEdu,
 #myExp {
-  margin-top: 60px;
+  margin-top: 4rem;
 }
 
 #myEdu h2,
 #myExp h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   position: relative;
   display: inline-block;
+  color: #333;
 }
 
 #myEdu h2::after,
 #myExp h2::after {
   content: "";
   display: block;
-  width: 60%;
+  width: 60px;
   height: 3px;
   background: linear-gradient(90deg, #5bc0be, #3aafa9);
-  margin-top: 5px;
-  border-radius: 2px;
+  margin-top: 0.5rem;
+  border-radius: 3px;
 }
 
 .timeline {
   position: relative;
-  margin: 20px 0;
-  padding-left: 30px;
+  margin: 1.5rem 0;
+  padding-left: 2rem;
   width: 100%;
+  /* z-index: -10; */
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  left: 12px;
+  left: 0.75rem;
   top: 0;
   bottom: 0;
-  width: 3px;
+  width: 0.2rem;
   background: linear-gradient(180deg, #5bc0be, #3aafa9);
-  border-radius: 2px;
+  border-radius: 0.15rem;
 }
 
 .timeline-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   position: relative;
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateX(-2rem);
   animation: fadeInSlide 0.6s forwards;
 }
 
@@ -77,29 +81,29 @@
 }
 
 .timeline-dot {
-  width: 18px;
-  height: 18px;
+  width: 1.1rem;
+  height: 1.1rem;
   background: #5bc0be;
-  border: 3px solid #fff;
-  box-shadow: 0px 0px 6px rgba(91, 192, 190, 0.6);
+  border: 0.2rem solid #fff;
+  box-shadow: 0px 0px 0.4rem rgba(91, 192, 190, 0.6);
   border-radius: 50%;
   position: absolute;
-  left: -28px;
-  top: 8px;
+  left: -1.85rem;
+  top: 0.5rem;
 }
 
 .timeline-content {
-  margin-left: 25px;
+  margin-left: 1.5rem;
   background: linear-gradient(135deg, #f9f9f9, #f1f1f1);
-  padding: 15px 20px;
-  border-radius: 10px;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.25rem;
+  border-radius: 0.6rem;
+  box-shadow: 0px 0.4rem 0.8rem rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .timeline-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-0.3rem);
+  box-shadow: 0px 0.6rem 1.1rem rgba(0, 0, 0, 0.12);
 }
 
 .timeline-content h3 {
@@ -110,69 +114,180 @@
 }
 
 .timeline-content p {
-  margin: 6px 0;
-  font-size: 0.95rem;
-  color: #444;
+  margin: 0.4rem 0;
+  font-size: 1rem;
 }
 
 /* Skill badges */
 .skill-badges {
-  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
 }
 
 .skill-badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  color: #333;
-  padding: 6px 12px;
+  gap: 0.4rem;
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
   font-size: 0.85rem;
-  border-radius: 20px;
-  border: 1px solid #5bc0be;
-  transition: 0.3s;
-  cursor: default;
-  background: #f0fafa;
+  transition: all 0.2s ease;
 }
 
 .skill-badge:hover {
-  background: #5bc0be;
-  color: #fff;
+  background: #dee2e6;
   transform: scale(1.05);
 }
 
 .skill-badge svg {
-  margin-right: 6px;
-  font-size: 1rem;
-}
-
-/* Alternate timeline animations */
-.timeline-item:nth-child(even) {
-  transform: translateX(30px);
-}
-
-.timeline-item:nth-child(even) {
-  animation: fadeInSlideRight 0.6s forwards;
+  width: 1rem;
+  height: 1rem;
 }
 
 #myEdu,
 #myExp {
-  padding-top: 20px;
-  border-top: 1px dashed #ddd;
+  overflow: hidden; /* Ensures children animations are contained */
 }
 
-@keyframes fadeInSlideRight {
+/* Animation */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* Animation */
-@keyframes fadeInSlide {
-  to {
-    opacity: 1;
-    transform: translateX(0);
+/* Media Queries for Responsive Font Sizes */
+@media (max-width: 1440px) {
+  .timeline{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about p {
+    font-size: 0.9rem;
+  }
+
+  #mySelf p:first-child {
+    font-size: 1.4rem;
+  }
+
+  #myEdu h2,
+  #myExp h2 {
+    font-size: 1.4rem;
+  }
+
+  .timeline {
+    width: 90%;
+  }
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+
+  .timeline-content .skill-badge {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+  .about {
+    padding: 30px 15px;
+  }
+
+  .about p {
+    font-size: 0.85rem;
+  }
+
+  #mySelf p:first-child {
+    font-size: 1.2rem;
+  }
+
+  #myEdu h2,
+  #myExp h2 {
+    font-size: 1.2rem;
+  }
+
+  .timeline {
+    width: 95%;
+    padding-left: 1.5rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+
+  .timeline-content .skill-badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .timeline-dot {
+    width: 0.9rem;
+    height: 0.9rem;
+    left: -1.29rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #mySelf p:first-child {
+    font-size: 1.5rem;
+  }
+
+  #myEdu h2,
+  #myExp h2 {
+    font-size: 1.4rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  #mySelf p:first-child {
+    font-size: 1.3rem;
+  }
+
+  #myEdu h2,
+  #myExp h2 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.7rem;
+  }
+
+  .timeline-content .skill-badge {
+    font-size: 0.65rem;
+    padding: 3px 6px;
   }
 }

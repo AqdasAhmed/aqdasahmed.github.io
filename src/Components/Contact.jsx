@@ -1,8 +1,9 @@
-import React from 'react';
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaCodepen, FaFreeCodeCamp, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaThreads } from "react-icons/fa6";
+import {HiMiniArrowPathRoundedSquare} from 'react-icons/hi2'
 import './Contact.css';
 import ContactForm from './ContactForm';
+import React from 'react';
 
 const Contact = ({ onUnflip }) => {
   const contact_list = [
@@ -21,6 +22,21 @@ const Contact = ({ onUnflip }) => {
       link: 'https://www.linkedin.com/in/aqdas-khan-777286291',
       icon: <FaLinkedin />,
     },
+    {
+      name: 'Github',
+      link: 'https://github.com/AqdasAhmed',
+      icon: <FaGithub />,
+    },
+    {
+      name: 'Codepen',
+      link: 'https://codepen.io/AqdasAhmed',
+      icon: <FaCodepen />,
+    },
+    {
+      name: 'FreeCodeCamp',
+      link: 'https://www.freecodecamp.org/AqdasAhmed',
+      icon: <FaFreeCodeCamp />,
+    }
   ]
 
   return (
@@ -29,7 +45,7 @@ const Contact = ({ onUnflip }) => {
       <ContactForm />
 
       <div id='myProfiles' style={{ flexDirection: 'row', marginTop: '20px' }}>
-      <p style={{width: '100%', color: '#3a506b'}}>Socialize with me</p>
+        <p style={{ width: '100%', color: '#3a506b' }}>Socialize with me</p>
         {contact_list.map((obj) => (
           <span><a href={obj.link} target='_blank' title={obj.name}>{obj.icon}</a></span>
         ))}
@@ -37,11 +53,9 @@ const Contact = ({ onUnflip }) => {
 
       <p
         onClick={onUnflip}
-        style={{
-          cursor: 'pointer', color: '#3a506b'
-        }}
-      >
-        {`<< Back`}
+        id='contact-me'
+        >
+        <HiMiniArrowPathRoundedSquare style={{ transform: 'rotateY(180deg)' }} />
       </p>
 
     </div>

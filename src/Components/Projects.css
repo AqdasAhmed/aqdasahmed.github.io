@@ -1,0 +1,318 @@
+.projects {
+  height: 400px;
+  margin: 50px auto;
+  padding: 40px 20px;
+}
+
+.projects h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.projects h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #5bc0be, #3aafa9);
+  margin-top: 0.5rem;
+  border-radius: 3px;
+}
+
+.project-list {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 16px 4px 24px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project {
+  flex: 0 0 320px;
+  min-width: 390px;
+  max-width: 410px;
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  margin: 20px 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+.project:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+}
+
+.project-img {
+  width: 100%;
+  height: 180px; /* ✅ uniform image height */
+  overflow: hidden;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ keeps consistent size without stretching */
+}
+
+.project p {
+  margin: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.project-links {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  /* background: rgba(91, 192, 190, 0.9);
+  color: #fff; */
+  color: rgba(91, 192, 190);
+  background: #fff;
+
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.project:hover .project-links a {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.project-links a:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #3aafa9, #2b7a78);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-details {
+  margin: 20px;
+}
+
+.project-details p:last-child {
+  display: none;
+}
+
+.project:hover .project-details p:last-child {
+  display: flex;
+}
+
+.project .skill-badges {
+  margin: 0 20px 20px 20px;
+  display: none;
+}
+
+.project:hover .skill-badges {
+  display: flex;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  height: 90%;
+  max-width: 100vw;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+  overflow: scroll;
+}
+
+.modal-content img {
+  width: 70%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modal-close {
+  position: fixed;
+  top: 20px;
+  right: 5px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects h2 {
+    font-size: 1.4rem;
+  }
+
+  .project {
+    min-width: 350px;
+    margin: 20px 10px;
+  }
+
+  .project-img {
+    height: 170px;
+  }
+
+  .project-details {
+    margin: 10px;
+  }
+
+  .project p {
+    font-size: 0.8rem;
+  }
+
+  .project .skill-badges {
+    margin: 0 10px 10px 10px;
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+
+  .project .skill-badge {
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px){
+  .projects {
+    padding: 30px 15px;
+  }
+
+  .projects h2 {
+    font-size: 1.2rem;
+  }
+
+  .project {
+    min-width: 300px;
+    margin: 15px 10px;
+  }
+
+  .project-img {
+    height: 160px;
+  }
+
+  .project p {
+    font-size: 0.85rem;
+  }
+
+  .project-links a {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .project-details {
+    margin: 15px;
+  }
+
+  .skill-badges {
+    margin: 0 15px 15px 15px;
+    gap: 6px;
+  }
+
+  .skill-badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 426px) {
+  .projects {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .projects h2 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project {
+    min-width: 250px;
+    margin: 10px 8px;
+  }
+
+  .project-img {
+    height: 140px;
+  }
+
+  .project p {
+    font-size: 0.75rem;
+  }
+
+  .project-links a {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+
+  .project-details {
+    margin: 10px;
+  }
+
+  .skill-badges {
+    margin: 0 10px 10px 10px;
+    gap: 5px;
+  }
+
+  .skill-badge {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+  
+}

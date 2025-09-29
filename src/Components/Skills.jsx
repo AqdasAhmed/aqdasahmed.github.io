@@ -1,111 +1,52 @@
 import React from 'react'
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaBootstrap } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaBootstrap, FaGithub } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiGooglecloud, SiFirebase } from "react-icons/si";
-import './Skills.css'
 import { GrMysql } from 'react-icons/gr';
+import './Skills.css'
 
 const Skills = () => {
   const skillSet = [
-    {
-      key: 'html',
-      name: 'HTML',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <FaHtml5 />,
+    { key: 'html', name: 'HTML', imgSrc: <FaHtml5 />, for: 'frontend' },
+    { key: 'css', name: 'CSS', imgSrc: <FaCss3Alt />, for: 'frontend' },
+    { key: 'js', name: 'JavaScript', imgSrc: <FaJsSquare />, for: 'frontend' },
+    { key: 'react', name: 'ReactJS', imgSrc: <FaReact />, for: 'frontend' },
+    { key: 'bootstrap', name: 'Bootstrap', imgSrc: <FaBootstrap />, for: 'frontend' },
+    { key: 'express', name: 'ExpressJS', imgSrc: <SiExpress />, for: 'backend' },
+    { key: 'nodejs', name: 'NodeJS', imgSrc: <FaNodeJs />, for: 'backend' },
+    { key: 'mongo', name: 'MongoDB', imgSrc: <SiMongodb />, for: 'database' },
+    { key: 'mysql', name: 'MySQL', imgSrc: <GrMysql />, for: 'database' },
+    { key: 'gcp', name: 'Google Cloud', imgSrc: <SiGooglecloud />, for: 'cloud' },
+    { key: 'firebase', name: 'Firebase', imgSrc: <SiFirebase />, for: 'cloud' },
+    { key: 'git', name: 'Git', imgSrc: <FaGitAlt />, for: 'version control' },
+    { key: 'github', name: 'GitHub', imgSrc: <FaGithub />, for: 'version control' },
+  ];
 
-    },
-    {
-      key: 'css',
-      name: 'CSS',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <FaCss3Alt />,
-    },
-    {
-      key: 'js',
-      name: 'JS',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <FaJsSquare />
-    },
-    {
-      key: 'react',
-      name: 'ReactJS',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <FaReact />
-    },
-    {
-      key: 'express',
-      name: 'ExpressJs',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <SiExpress />,
+  // Group skills by "for"
+  const groupedSkills = skillSet.reduce((acc, skill) => {
+    if (!acc[skill.for]) acc[skill.for] = [];
+    acc[skill.for].push(skill);
+    return acc;
+  }, {});
 
-    },
-    {
-      key: 'mongo',
-      name: 'MongoDB',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <SiMongodb />,
-    },
-    {
-      key: 'nodejs',
-      name: 'NodeJS',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <FaNodeJs />
-    },
-    {
-      key: 'gcp',
-      name: 'Google Cloud Platforms',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <SiGooglecloud />
-    },
-    {
-      key: 'firebase',
-      name: 'Firebase',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <SiFirebase />
-    },
-    {
-      key: 'git',
-      name: 'Git',
-      level: 'Expert',
-      project: 'Your-Tube Clone',
-      imgSrc: <FaGitAlt />
-    },
-    {
-      key: 'mysql',
-      name: 'MySQL',
-      level: 'Expert',
-      project: '--',
-      imgSrc: <GrMysql />
-    },
-    {
-      key: 'bootstrap',
-      name: 'Bootstrap',
-      level: 'Expert',
-      project: '--',
-      imgSrc: <FaBootstrap />
-    },
-  ]
   return (
-    <div className='skills' id="container">
-      <h2 style={{ fontSize: '1.8rem' }}>My Skills</h2>
-      <div className="skill-set">
-        {skillSet.map((obj) => (
-          <div className={`skill skill-${obj.key}`}>
-            <div className='img'>{obj.imgSrc}</div>
-            <p>{obj.name}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
+    <div className="skills" id="skill">
+      <h2>My Skills</h2>
 
-export default Skills
+      {Object.keys(groupedSkills).map((category) => (
+        <div key={category} className="skill-section">
+          <h3 className="skill-category">{category.toUpperCase()}</h3>
+          <div className="skill-set">
+            {groupedSkills[category].map((obj) => (
+              <div key={obj.key} className={`skill skill-${obj.key}`}>
+                <div className="img">{obj.imgSrc}</div>
+                <p>{obj.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Skills;
