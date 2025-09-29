@@ -179,7 +179,7 @@
 }
 
 /* --------------------- 425px: full-screen overlay when opened --------------------- */
-@media (max-width: 426px) {
+@media (max-width: 426px) and (max-height: 812px) {
   .navbar {
     position: fixed;
     top: 0;
