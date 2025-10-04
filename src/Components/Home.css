@@ -293,7 +293,7 @@
 
 @media (max-width: 426px) {
   .home {
-    width: 91vw;
+    width: 100vw;
     height: 100vh;
     left: 0;
     top: 0;
@@ -401,8 +401,8 @@
     }
 
     .home.scrolled #myPic {
-      width: 5vh;
-      height: 5vh;
+      width: 4vh;
+      height: 4vh;
     }
 
     .home.scrolled #myName {
