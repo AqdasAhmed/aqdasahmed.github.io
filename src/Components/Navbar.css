@@ -246,7 +246,7 @@
   /* Small phones + touch devices */
   @media (max-width: 420px), (hover: none) and (pointer: coarse) {
     .navbar {
-      width: 85%;
+      width: 75%;
       left: -100%;
       padding: 14px;
     }
