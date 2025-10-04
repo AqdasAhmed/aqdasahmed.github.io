@@ -105,7 +105,7 @@
 
   .navbar {
     position: fixed;
-    top: 9vh;
+    top: 15vh;
     right: 0px;
     width: auto;
     height: auto;
@@ -174,7 +174,7 @@
   .navbar-links li a:hover,
   .navbar-links li a.active {
     box-shadow: 0 20px 36px rgba(0, 0, 0, 0.18);
-    transform: translateY(-4px);
+    transform: translateY(-1px);
   }
 }
 
@@ -224,6 +224,7 @@
 
   .navbar-links li {
     opacity: 0;
+    margin-top: 5px;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     width: 100%;
@@ -292,13 +293,13 @@
     background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
     color: #fff;
     box-shadow: 0 26px 48px rgba(0, 0, 0, 0.28);
-    transform: translateY(-6px);
+    transform: translateY(-1px);
   }
 
   /* nav-btn always visible on mobile */
   .nav-btn {
-    top: 7vh;
-    right: 17px;
+    top: 6vh;
+    right: 25px;
     display: flex;
     z-index: 1100;
   }

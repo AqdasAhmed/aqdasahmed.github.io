@@ -52,26 +52,46 @@ const Projects = () => {
         { skill: 'Git', icon: <FaGitAlt /> },
         { skill: 'GitHub', icon: <FaGithub /> }]
     },
-    // {
-    //   key: "dummy",
-    //   name: "Dummy Website",
-    //   imgSrc: "/images/portfolio.png",
-    //   start_date: "Aug 2025",
-    //   end_date: "Present",
-    //   for: "Me",
-    //   type: "Personal",
-    //   description:
-    //     "My personal portfolio showcasing projects, skills, and experiences. Built using React and styled with CSS Grid/Flexbox.",
-    //   github: '#',
-    //   live: '#',
-    //   skillsUsed: [
-    //     { skill: 'HTML', icon: <FaHtml5 /> },
-    //     { skill: 'CSS', icon: <FaCss3Alt /> },
-    //     { skill: 'JS', icon: <FaJsSquare /> },
-    //     { skill: 'ReactJS', icon: <FaReact /> },
-    //     { skill: 'Git', icon: <FaGitAlt /> },
-    //     { skill: 'GitHub', icon: <FaGithub /> }]
-    // }
+    {
+      key: "dummy",
+      name: "Dummy Website",
+      imgSrc: "/images/portfolio.png",
+      start_date: "Aug 2025",
+      end_date: "Present",
+      for: "Me",
+      type: "Personal",
+      description:
+        "My personal portfolio showcasing projects, skills, and experiences. Built using React and styled with CSS Grid/Flexbox.",
+      github: '#',
+      live: '#',
+      skillsUsed: [
+        { skill: 'HTML', icon: <FaHtml5 /> },
+        { skill: 'CSS', icon: <FaCss3Alt /> },
+        { skill: 'JS', icon: <FaJsSquare /> },
+        { skill: 'ReactJS', icon: <FaReact /> },
+        { skill: 'Git', icon: <FaGitAlt /> },
+        { skill: 'GitHub', icon: <FaGithub /> }]
+    },
+    {
+      key: "dummy",
+      name: "Dummy Website",
+      imgSrc: "/images/portfolio.png",
+      start_date: "Aug 2025",
+      end_date: "Present",
+      for: "Me",
+      type: "Personal",
+      description:
+        "My personal portfolio showcasing projects, skills, and experiences. Built using React and styled with CSS Grid/Flexbox.",
+      github: '#',
+      live: '#',
+      skillsUsed: [
+        { skill: 'HTML', icon: <FaHtml5 /> },
+        { skill: 'CSS', icon: <FaCss3Alt /> },
+        { skill: 'JS', icon: <FaJsSquare /> },
+        { skill: 'ReactJS', icon: <FaReact /> },
+        { skill: 'Git', icon: <FaGitAlt /> },
+        { skill: 'GitHub', icon: <FaGithub /> }]
+    }
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
