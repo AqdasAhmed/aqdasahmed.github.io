@@ -368,7 +368,7 @@
   /* Small phones and modern devices (Pixel, Redmi, etc.) */
   @media (max-width: 420px), (hover: none) and (pointer: coarse) {
     .home {
-      width: 96vw;
+      width: 100vw;
       padding: 0 6px;
     }
 
@@ -393,16 +393,16 @@
     }
 
     .home.scrolled {
-      width: 80vw;
+      width: 75vw;
       height: 8.5vh;
-      left: 2vw;
-      top: 2vh;
+      left: 1vw;
+      top: 1vh;
       padding: 6px 10px;
     }
 
     .home.scrolled #myPic {
-      width: 6vh;
-      height: 6vh;
+      width: 5vh;
+      height: 5vh;
     }
 
     .home.scrolled #myName {
@@ -411,12 +411,12 @@
     }
 
     .home.scrolled #myTitles {
-      font-size: 0.6rem;
+      font-size: 0.5rem;
       margin-left: 6px;
     }
 
     .home.scrolled #myProfiles {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       margin-right: 6px;
     }
 
