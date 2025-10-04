@@ -5,6 +5,29 @@
   height: 90vh;
   width: 25vw;
   position: fixed;
+/* Small phones and touch devices */
+@media (max-width: 420px), (hover: none) and (pointer: coarse) {
+  .contact {
+    width: 94vw;
+    left: 3vw;
+    top: 10vh;
+    padding: 12px;
+  }
+
+  #emailForm input,
+  #emailForm button,
+  #emailForm textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .contact-close {
+    top: 8px;
+    right: 8px;
+    font-size: 1.1rem;
+  }
+}
   box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.18);
   background: whitesmoke;
   transition: all 0.7s;

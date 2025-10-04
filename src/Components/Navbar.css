@@ -98,7 +98,7 @@
 }
 
 /* --------------------- MOBILE (<=768) behaviour --------------------- */
-@media (max-width: 768px) and (min-width: 479px) {
+@media (max-width: 768px) and (min-width: 426px) {
   .nav-btn {
     display: flex;
   }
@@ -179,7 +179,7 @@
 }
 
 /* --------------------- 425px: full-screen overlay when opened --------------------- */
-@media (max-width: 480px) {
+@media (max-width: 426px) {
   .navbar {
     position: fixed;
     top: 0;
@@ -241,6 +241,29 @@
   }
   .navbar.open .navbar-links li:nth-child(2) {
     transition-delay: 0.2s;
+  }
+
+  /* Small phones + touch devices */
+  @media (max-width: 420px), (hover: none) and (pointer: coarse) {
+    .navbar {
+      width: 85%;
+      left: -100%;
+      padding: 14px;
+    }
+
+    .navbar.open {
+      left: 0;
+    }
+
+    .navbar-links {
+      margin-top: 50px;
+      gap: 8px;
+    }
+
+    .navbar-links li a {
+      font-size: 0.95rem;
+      padding: 10px 12px;
+    }
   }
   .navbar.open .navbar-links li:nth-child(3) {
     transition-delay: 0.3s;

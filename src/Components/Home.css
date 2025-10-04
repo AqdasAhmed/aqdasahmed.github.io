@@ -365,4 +365,65 @@
     right: 5px;
     display: inline;
   }
+  /* Small phones and modern devices (Pixel, Redmi, etc.) */
+  @media (max-width: 420px), (hover: none) and (pointer: coarse) {
+    .home {
+      width: 96vw;
+      left: 2vw;
+      padding: 0 6px;
+    }
+
+    .home #myPic {
+      width: 18vw;
+      height: 18vw;
+    }
+
+    .home #myName {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .home #myProfiles {
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      gap: 0.8rem;
+    }
+
+    .home #myTitles {
+      font-size: 0.65rem;
+    }
+
+    .home.scrolled {
+      width: 96vw;
+      height: 8.5vh;
+      left: 2vw;
+      top: 2vh;
+      padding: 6px 10px;
+    }
+
+    .home.scrolled #myPic {
+      width: 6vh;
+      height: 6vh;
+    }
+
+    .home.scrolled #myName {
+      font-size: 0.9rem;
+      margin-left: 6px;
+    }
+
+    .home.scrolled #myTitles {
+      font-size: 0.6rem;
+      margin-left: 6px;
+    }
+
+    .home.scrolled #myProfiles {
+      font-size: 0.95rem;
+      margin-right: 6px;
+    }
+
+    /* Hide hover-only effects on touch devices */
+    .home #myProfiles #myProfile:hover {
+      transform: none;
+    }
+  }
 }

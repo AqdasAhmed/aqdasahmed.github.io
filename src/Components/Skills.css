@@ -240,3 +240,22 @@
     transform: translateY(-4px) scale(1.03);
   }
 }
+
+/* Small phones / touch devices */
+@media (max-width: 420px), (hover: none) and (pointer: coarse) {
+  .skills {
+    padding: 18px 12px;
+  }
+
+  .skills h2 {
+    font-size: 1.1rem;
+  }
+
+  .skill-set {
+    gap: 12px;
+  }
+
+  .skill p {
+    font-size: 0.85rem;
+  }
+}

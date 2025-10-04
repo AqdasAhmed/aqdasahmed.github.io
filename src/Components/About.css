@@ -291,3 +291,23 @@
     padding: 3px 6px;
   }
 }
+
+/* Small phones / touch devices */
+@media (max-width: 420px), (hover: none) and (pointer: coarse) {
+  .about {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .about p {
+    font-size: 0.95rem;
+  }
+
+  #mySelf p:first-child {
+    font-size: 1.25rem;
+  }
+
+  #myEdu h2,
+  #myExp h2 {
+    font-size: 1.1rem;
+  }
+}

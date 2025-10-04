@@ -7,8 +7,12 @@
 }
 
 .flip-card-container.scrolled {
-    width: 25vw;
-    height: 90vh;
+    width: 90vw;
+    height: 8vh;
+    position: fixed;
+    top: 3vh;
+    left: 3vw;
+    z-index: 1000;
 }
 
 .flip-card {
@@ -38,4 +42,23 @@
   .flip-card{
     width: 90vw;
   }
+    /* Small phone / touch devices */
+    @media (max-width: 420px), (hover: none) and (pointer: coarse) {
+        .flip-card-container.scrolled {
+            width: 96vw;
+            left: 2vw;
+            height: 9vh;
+            top: 2vh;
+        }
+
+        .flip-card-front, .flip-card-back {
+            height: 9vh;
+            padding: 0 8px;
+            gap: 8px;
+        }
+
+        .flip-card-front .content, .flip-card-back .content {
+            font-size: 0.9rem;
+        }
+    }
 }
