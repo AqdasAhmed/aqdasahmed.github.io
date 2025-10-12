@@ -373,6 +373,8 @@
       padding: 0 6px;
       left: -2vh;
       top: 0;
+      left: -2vh;
+      top: 0;
     }
 
     .home #myPic {
@@ -417,16 +419,25 @@
       font-size: 0.5rem;
       margin-left: 1px;
       display: none;
+      margin-left: 1px;
+      display: none;
     }
 
     .home.scrolled #myProfiles {
       font-size: 0.9rem;
+      margin-right: 1px;
       margin-right: 1px;
     }
 
     /* Hide hover-only effects on touch devices */
     .home #myProfiles #myProfile:hover {
       transform: none;
+    }
+
+    .home.scrolled #contact-me {
+      font-size: 0.9rem;
+      top: 30%;
+      display: inline;
     }
 
     .home.scrolled #contact-me {
