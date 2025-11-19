@@ -18,7 +18,6 @@ const CardFlip = () => {
                     <Home onPicClick={handleFlip} />
                 </div>
                 <div className="flip-card-back">
-                    <Contact onUnflip={handleUnflip} />
                 </div>
             </div>
         </div>

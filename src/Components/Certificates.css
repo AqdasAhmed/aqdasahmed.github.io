@@ -135,26 +135,34 @@
 }
 
 .certificate .skill-badges {
-  margin-top: 20px;
+  margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
+  padding: 0;
 }
 
 .certificate .skill-badges .skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: #e6f7f7;
   color: #2b7a78;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  transition: all 0.25s ease;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  transition: background 0.25s ease, transform 0.12s ease;
 }
-.certificate .skill-badges .skill-badge:hover {
+
+.certificate .skill-badges .skill-badge:hover,
+.certificate .skill-badges .skill-badge:focus {
   background: #3aafa9;
   color: #fff;
+  transform: translateY(-2px);
+}
+
+.certificate .skill-badges .skill-badge:focus {
+  box-shadow: 0 0 0 3px rgba(58, 175, 169, 0.18);
 }
 
 @media (max-width: 1024px) {
@@ -217,9 +225,9 @@
     font-size: 0.9rem;
   }
 
-  .skill-badge {
+  .certificate .skill-badges .skill-badge {
     font-size: 0.8rem;
-    padding: 6px 12px;
+    padding: 6px;
   }
 }
 

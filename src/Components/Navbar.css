@@ -27,6 +27,7 @@
   cursor: pointer;
   z-index: 1100;
 }
+
 .nav-btn span {
   display: block;
   background: #5bc0be;
@@ -34,15 +35,19 @@
   border-radius: 2px;
   transition: all 0.28s ease;
 }
+
 .nav-btn span:nth-child(1) {
   width: 100%;
 }
+
 .nav-btn span:nth-child(2) {
   width: 75%;
 }
+
 .nav-btn span:nth-child(3) {
   width: 55%;
 }
+
 .nav-btn:hover span {
   background: #3a506b;
 }
@@ -55,10 +60,12 @@
 .nav-btn.open span:nth-child(1) {
   transform: rotate(45deg) translateX(17px);
 }
+
 .nav-btn.open span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
+
 .nav-btn.open span:nth-child(3) {
   transform: rotate(-45deg) translateX(16px);
   width: 100%;
@@ -72,9 +79,12 @@
   margin: 0 10px;
   padding: 0;
 }
+
 .navbar-links li a {
-  color: #3a506b;
-  background: #fff;
+  /* color: #3a506b;
+  background: #fff; */
+  color: whitesmoke;
+  background: transparent;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -82,19 +92,44 @@
   border-radius: 20px;
   transition: transform 0.22s ease, box-shadow 0.22s ease, color 0.22s ease,
     background 0.22s ease;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* subtle floating */
+  /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); */
   display: block;
   cursor: pointer;
 }
+
 .navbar-links li a:hover,
 .navbar-links li a.active {
+  /* background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
+  color: #fff; */
+  background: whitesmoke;
+  color: #3a506b;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18); /* stronger floating on hover/active */
+}
+
+.navbar.visible .navbar-links li a {
+  background: white;
+  color: #3a506b;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.navbar.visible .navbar-links li a:hover,
+.navbar.visible .navbar-links li a.active {
   background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18); /* stronger floating on hover/active */
 }
+
 .navbar-links li a:active {
   transform: scale(0.98);
+}
+
+@media (max-width: 1024px) {
+  .navbar-links li a {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
 }
 
 /* --------------------- MOBILE (<=768) behaviour --------------------- */
@@ -298,8 +333,8 @@
 
   /* nav-btn always visible on mobile */
   .nav-btn {
-    top: 6vh;
-    right: 25px;
+    top: 7vh;
+    right: 3vw;
     display: flex;
     z-index: 1100;
   }

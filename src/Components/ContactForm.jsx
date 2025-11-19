@@ -68,7 +68,7 @@ const ContactForm = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Message"
-                    rows='5'
+                    rows='2'
                     required
                 />
                 <button

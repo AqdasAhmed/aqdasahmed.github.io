@@ -5,6 +5,7 @@ import Projects from './Components/Projects';
 import CardFlip from './Components/CardFlip';
 import Certificate from './Components/Certificates'
 import Navbar from './Components/Navbar';
+import Contact from './Components/Contact';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <div className='section'><Skills /></div>
         <div className='section'><Projects /></div>
         <div className="section"><Certificate /></div>
+        <div className='section'><Contact /></div>
       </div>
     </div>
   );

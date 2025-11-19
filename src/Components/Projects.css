@@ -6,7 +6,7 @@
   max-width: 1300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .projects h2 {
@@ -23,7 +23,7 @@
   width: 80px;
   height: 4px;
   background: linear-gradient(90deg, #5bc0be, #3aafa9);
-  margin: 0.5rem auto 0;
+  margin: 0.5rem 0;
   border-radius: 3px;
 }
 
@@ -132,27 +132,35 @@
 }
 
 /* 🧩 Skill Badges */
-.skill-badges {
+.project .skill-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 0 18px 18px 18px;
+  margin-top: 12px;
+  padding: 0 16px 16px 16px;
 }
 
-.skill-badge {
+.project .skill-badges .skill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.8rem;
-  background: #f1f9f9;
+  gap: 6px;
+  background: #e6f7f7;
   color: #2b7a78;
-  border-radius: 8px;
-  padding: 4px 8px;
-  transition: background 0.25s ease;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  transition: background 0.25s ease, transform 0.12s ease;
 }
 
-.skill-badge:hover {
-  background: #def5f4;
+.project .skill-badges .skill-badge:hover,
+.project .skill-badges .skill-badge:focus {
+  background: #3aafa9;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.project .skill-badges .skill-badge:focus {
+  box-shadow: 0 0 0 3px rgba(58, 175, 169, 0.18);
 }
 
 /* 🪟 Modal (optional, unchanged for now) */
@@ -207,7 +215,7 @@
 /* 💻 Responsiveness */
 @media (max-width: 1024px) {
   .projects h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .project-img {
     height: 160px;

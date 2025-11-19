@@ -1,329 +1,170 @@
+/* Contact.refactor.css — clean stylesheet matching About sizing/positioning */
 .contact {
-  top: 2vh;
-  left: 2vw;
-  border-radius: 32px;
-  height: 90vh;
-  width: 25vw;
-  position: fixed;
-/* Small phones and touch devices */
-@media (max-width: 420px), (hover: none) and (pointer: coarse) {
-  .contact {
-    width: 94vw;
-    left: 3vw;
-    top: 10vh;
-    padding: 12px;
-  }
-
-  #emailForm input,
-  #emailForm button,
-  #emailForm textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 0.95rem;
-  }
-
-  .contact-close {
-    top: 8px;
-    right: 8px;
-    font-size: 1.1rem;
-  }
-}
-  box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.18);
-  background: whitesmoke;
-  transition: all 0.7s;
-  padding: 20px;
-  border: 4px solid transparent;
-  background-clip: padding-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact.gradient-border {
-  border: 2px solid transparent;
-  border-radius: 32px;
-  background-image: linear-gradient(whitesmoke, whitesmoke),
-    linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
-  background-origin: padding-box, border-box;
-  background-clip: padding-box, border-box;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  width: 92%;
+  max-width: 980px;
+  border-radius: 14px;
+  transition: all 0.28s ease;
+  display: block;
 }
 
 .contact .gradient-text {
+  color: transparent;
   background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
 }
 
 .contact #myProfiles {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  height: 15%;
+  gap: 10px;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  border-top: solid 0.1px #3a506b;
+  padding-top: 12px;
+  border-top: 2px solid rgba(44, 60, 80, 0.18);
+  margin-top: 16px;
+}
+
+.contact #myProfiles a {
+  color: #3a506b;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.contact #myProfiles a:hover {
+  color: #5bc0be;
 }
 
 .contact #myProfiles span {
-  font-size: 2rem;
-  margin: 0 10px;
+  font-size: 1rem;
+  margin: 4px 8px;
 }
 
-.contact #myProfiles span a {
-  color: #3a506b;
-}
-
-#emailForm {
+.contact #emailForm {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  height: 50%;
+  gap: 12px;
+  width: 100%;
   color: #3a506b;
 }
-
-#emailForm input,
-#emailForm button {
-  width: 90%;
-  padding: 2.5vh;
-  margin: 2vh 0;
-  border-radius: 5px;
-  border: solid 0.1px #5bc0be;
-  float: left;
-  font-size: medium;
+.contact #emailForm input,
+.contact #emailForm textarea,
+.contact #emailForm button {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(41, 149, 147, 0.5);
+  background: #fff;
+  font-size: 0.95rem;
 }
-
-#emailForm textarea {
-  width: 92%;
-  padding: 2vh;
-  margin: 2vh 0;
-  border-radius: 5px;
-  border: solid 0.1px #5bc0be;
-  float: left;
-  resize: none;
-  font-size: large;
+.contact #emailForm textarea {
+  min-height: 60px;
+  resize: vertical;
 }
-
-#emailForm input:focus,
-#emailForm textarea:focus {
-  border-color: #3a506b;
+.contact #emailForm input:focus,
+.contact #emailForm textarea:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(59, 129, 246, 0.2);
+  box-shadow: 0 6px 18px rgba(58, 175, 169, 0.08);
+  border-color: #3a506b;
 }
-
-#emailForm button {
-  display: flex;
-  background: transparent;
-  font-weight: bold;
-  cursor: pointer;
-  width: 40%;
-  background: linear-gradient(135deg, #3a506b 0%, rgb(91, 192, 190) 100%);
-  color: whitesmoke;
-  float: left;
-  transition: all 0.3s ease-in-out;
+.contact #emailForm button {
+  background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-}
-
-#emailForm button:hover {
-  transform: translateY(-3px); /* subtle lift effect */
-  box-shadow: 0 8px 20px rgba(91, 192, 190, 0.35); /* smoother shadow */
+  width: 30%;
 }
 
 #formModal {
-  background: whitesmoke;
-  z-index: 30;
+  z-index: 60;
   position: fixed;
-  justify-self: center;
-  align-self: center;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .contact #contact-me {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  padding: 5px;
-  font-size: 1.2rem;
+  display: inline-block;
+  padding: 6px 8px;
+  font-size: 0.95rem;
   color: #3a506b;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.contact:hover #contact-me {
-  display: inline;
 }
 
 @media (max-width: 1440px) {
-  #emailForm input,
-  #emailForm button {
+  .contact {
     width: 92%;
-    padding: 1.5vh;
-    margin: 1vh 0;
-    font-size: medium;
-  }
-
-  #emailForm textarea {
-    width: 92%;
-    padding: 1.5vh;
-    margin: 1vh 0;
-  }
-
-  #emailForm button {
-    width: 30%;
   }
 }
-
 @media (max-width: 1024px) {
-  #emailForm input,
-  #emailForm button {
-    width: 92%;
-    padding: 1.5vh;
-    margin: 1vh 0;
-    font-size: small;
+  .contact {
+    padding: 28px 16px;
   }
-
-  #emailForm textarea {
-    width: 92%;
-    padding: 1.5vh;
-    margin: 1vh 0;
-    font-size: medium;
+  .contact #emailForm input,
+  .contact #emailForm textarea {
+    font-size: 0.75rem;
+    padding: 10px 12px;
   }
-
-  #emailForm button {
-    width: 35%;
-    font-size: 0.8rem;
+  .contact #emailForm button {
+    width: 20%;
+    font-size: 0.75rem;
+    padding: 10px 12px;
   }
-
-  .contact p {
-    font-size: 0.9rem;
-  }
-
-  .contact #myProfiles span {
-    font-size: 1.3rem;
-    margin: 0 10px;
+  .contact #myProfiles a {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 768px) and (min-width: 426px) {
   .contact {
-    padding: 15px;
-    width: 91.7vw;
-  }
-
-  .contact .gradient-text {
-    font-size: 1.2rem;
-  }
-
-  #emailForm {
-    width: 95%;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  #emailForm input,
-  #emailForm button {
-    width: 45.2%;
-    padding: 1.8vh;
-    margin: 1vh 2vh 1vh 0vh;
-    font-size: 0.85rem;
-  }
-
-  #emailForm textarea {
-    width: 95%;
-    padding: 1.8vh;
-    margin: 2vh 0;
-    font-size: 0.85rem;
-  }
-
-  #emailForm button {
-    width: 20%;
-    font-size: 0.75rem;
-    padding: 1.5vh;
-  }
-
-  .contact p {
-    font-size: 0.85rem;
-  }
-
-  .contact #myProfiles {
+    padding: 22px 14px;
     width: 95%;
   }
-
-  .contact #myProfiles span {
-    font-size: 1.5rem;
-    margin: 0 8px;
-  }
-
-  .contact #contact-me {
-    font-size: 1.2rem;
-    top: -5px;
-    left: 15px;
-    display: inline;
+  .contact #emailForm input,
+  .contact #emailForm textarea {
+    padding: 10px 12px;
   }
 }
-
 @media (max-width: 426px) {
   .contact {
-    top: 8vh;
-    left: 5vw;
-    height: 80vh;
-    width: 85vw;
-    padding: 10px;
-  }
-
-  .contact .gradient-text {
-    font-size: 1rem;
-  }
-
-  #emailForm {
+    padding: 18px 12px;
     width: 98%;
-    height: 55%;
-    flex-direction: column;
-    justify-content: center;
+    border-radius: 12px;
   }
-
-  #emailForm input,
-  #emailForm button {
-    width: 92%;
-    padding: 1.5vh;
-    margin: 1vh 0;
+  .contact #emailForm textarea {
+    min-height: 100px;
+  }
+}
+@media (max-width: 420px), (hover: none) and (pointer: coarse) {
+  .contact {
+    padding: 12px 10px;
+    width: 90%;
+    border-radius: 10px;
+  }
+  .contact #emailForm input,
+  .contact #emailForm textarea,
+  .contact #emailForm button {
+    padding: 10px 12px;
     font-size: 0.75rem;
+    width: 90%;
   }
-
-  #emailForm textarea {
-    width: 92%;
-    padding: 1.5vh;
-    margin: 1vh 0;
-    font-size: 0.75rem;
+  .contact #emailForm textarea {
+    min-height: 80px;
   }
-
-  #emailForm button {
-    width: 40%;
-    font-size: 0.7rem;
-    padding: 1.5vh;
-  }
-
-  .contact p {
-    font-size: 0.8rem;
-  }
-
-  .contact #myProfiles {
-    width: 98%;
-    height: auto;
-  }
-
-  .contact #myProfiles span {
-    font-size: 1.2rem;
-    margin: 0 6px;
-  }
-  
-  .contact #contact-me {
-    display: inline;
+  .contact #emailForm button {
+    width: 97.4%;
   }
 }

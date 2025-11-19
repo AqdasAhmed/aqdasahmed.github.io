@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaGithub, FaFreeCodeCamp, FaCodepen } from "react-icons/fa";
-import {HiMiniArrowPathRoundedSquare} from 'react-icons/hi2'
+import { HiMiniArrowPathRoundedSquare } from 'react-icons/hi2'
 import myPic from '../images/myPic2.png'
 import useScrollStep from '../hooks/useScrollStep';
 import './Home.css'
@@ -55,12 +55,6 @@ const Home = ({ onPicClick }) => {
                     <span id='myProfile'><a href={obj.link} target='_blank' title={obj.name}>{obj.icon}</a></span>
                 ))}
             </div> */}
-            <span
-                onClick={onPicClick}
-                id='contact-me'
-            >
-                {scrollStep > 2 ? <HiMiniArrowPathRoundedSquare style={{ transform: 'rotateY(180deg)' }} /> : ''}
-            </span>
         </div>
     );
 }
