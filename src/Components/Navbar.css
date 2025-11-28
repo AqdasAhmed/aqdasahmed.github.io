@@ -333,8 +333,8 @@
 
   /* nav-btn always visible on mobile */
   .nav-btn {
-    top: 7vh;
-    right: 3vw;
+    top: 5.5vh;
+    right: 5vw;
     display: flex;
     z-index: 1100;
   }
