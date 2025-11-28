@@ -7,11 +7,11 @@ import React from 'react';
 
 const Contact = ({ onUnflip }) => {
   const contact_list = [
-    {
-      name: 'Instagram',
-      link: 'https://www.instagram.com/_khan_aqdas_/',
-      icon: <FaInstagram />,
-    },
+    // {
+    //   name: 'Instagram',
+    //   link: 'https://www.instagram.com/_khan_aqdas_/',
+    //   icon: <FaInstagram />,
+    // },
     {
       name: 'Threads',
       link: 'https://www.threads.com/@_khan_aqdas_',

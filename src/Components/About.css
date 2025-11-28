@@ -274,7 +274,7 @@
 
 @media (max-width: 426px) {
   .about {
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
   }
 
   #mySelf p:first-child {
@@ -284,6 +284,18 @@
   #myEdu h2,
   #myExp h2 {
     font-size: 1.2rem;
+  }
+
+  .timeline::before {
+    left: 0.8rem;
+  }
+
+  .timeline-dot {
+    left: -1.8rem;
+  }
+
+  .timeline-content {
+    margin-left: 0.5rem;
   }
 
   .timeline-content h3 {

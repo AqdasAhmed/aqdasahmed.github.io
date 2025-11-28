@@ -258,6 +258,11 @@
     font-size: 0.85rem;
   }
 
+  .certificate-icon svg {
+    height: 8vh;
+    width: 8vh;
+  }
+
   .credential-btn {
     font-size: 0.75rem;
     padding: 5px 10px;
@@ -303,6 +308,11 @@
 
   .certificate-header h3 {
     font-size: 0.9rem;
+  }
+
+  .certificate-icon svg {
+    height: 5vh;
+    width: 5vh;
   }
 
   .certificate-header .org {
