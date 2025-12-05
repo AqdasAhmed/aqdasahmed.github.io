@@ -1,0 +1,47 @@
+[
+  {
+    "key": "yt",
+    "name": "Your-Tube Clone",
+    "imgSrc": "src/images/ytclone.png",
+    "start_date": "May 2025",
+    "end_date": "July 2025",
+    "for": "NullClass",
+    "type": "Internship",
+    "description": "A YouTube-like video platform with features such as video upload, HLS streaming, premium payments, and OTP verification.",
+    "github": "https://github.com/AqdasAhmed/you_tube_clone",
+    "live": "https://play-tube-clone.netlify.app/",
+    "skillsUsed": [
+      { "skill": "HTML", "icon": "FaHtml5" },
+      { "skill": "CSS", "icon": "FaCss3Alt" },
+      { "skill": "JS", "icon": "FaJsSquare" },
+      { "skill": "MongoDB", "icon": "SiMongodb" },
+      { "skill": "ExpressJS", "icon": "SiExpress" },
+      { "skill": "ReactJS", "icon": "FaReact" },
+      { "skill": "NodeJS", "icon": "FaNodeJs" },
+      { "skill": "Firebase", "icon": "SiFirebase" },
+      { "skill": "Google Cloud Platforms (GCP)", "icon": "SiGooglecloud" },
+      { "skill": "Git", "icon": "FaGitAlt" },
+      { "skill": "GitHub", "icon": "FaGithub" }
+    ]
+  },
+  {
+    "key": "deepdetect",
+    "name": "DeepDetect",
+    "imgSrc": "/images/portfolio.png",
+    "start_date": "Aug 2025",
+    "end_date": "Present",
+    "for": "Me",
+    "type": "Personal",
+    "description": "My personal portfolio showcasing projects, skills, and experiences. Built using React and styled with CSS Grid/Flexbox.",
+    "github": "#",
+    "live": "#",
+    "skillsUsed": [
+      { "skill": "HTML", "icon": "<FaHtml5 />" },
+      { "skill": "CSS", "icon": "<FaCss3Alt />" },
+      { "skill": "JS", "icon": "<FaJsSquare />" },
+      { "skill": "ReactJS", "icon": "<FaReact />" },
+      { "skill": "Git", "icon": "<FaGitAlt />" },
+      { "skill": "GitHub", "icon": "<FaGithub />" }
+    ]
+  }
+]

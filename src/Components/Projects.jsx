@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaPython, } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiGooglecloud, SiFirebase } from "react-icons/si";
 import { GoLinkExternal } from "react-icons/go";
 import ytclonePic from "../images/ytclone.png";
+import ddetectPic from "../images/Picture1.png";
 import "./Projects.css";
 
 const Projects = () => {
@@ -35,63 +36,23 @@ const Projects = () => {
     {
       key: "deepdetect",
       name: "DeepDetect",
-      imgSrc: "/images/portfolio.png",
-      start_date: "Aug 2025",
-      end_date: "Present",
-      for: "Me",
-      type: "Personal",
+      imgSrc: ddetectPic,
+      start_date: "July 2023",
+      end_date: "January 2024",
+      for: "Guru Nanak College of Arts, Science and Commerce",
+      type: "Academic Project",
       description:
-        "My personal portfolio showcasing projects, skills, and experiences. Built using React and styled with CSS Grid/Flexbox.",
+        "An AI model that classifies images and videos as real or fake based on a confidence percentage, utilizing Deep Learning for deepfake detection.",
       github: '#',
       live: '#',
       skillsUsed: [
-        { skill: 'HTML', icon: <FaHtml5 /> },
-        { skill: 'CSS', icon: <FaCss3Alt /> },
+        { skill: 'Python', icon: <FaPython /> },
+        { skill: 'Deep Learning', icon: <FaCss3Alt /> },
         { skill: 'JS', icon: <FaJsSquare /> },
         { skill: 'ReactJS', icon: <FaReact /> },
         { skill: 'Git', icon: <FaGitAlt /> },
         { skill: 'GitHub', icon: <FaGithub /> }]
     },
-    {
-      key: "dummy",
-      name: "Dummy Website",
-      imgSrc: "/images/portfolio.png",
-      start_date: "Aug 2025",
-      end_date: "Present",
-      for: "Me",
-      type: "Personal",
-      description:
-        "My personal portfolio showcasing projects, skills, and experiences. Built using React and styled with CSS Grid/Flexbox.",
-      github: '#',
-      live: '#',
-      skillsUsed: [
-        { skill: 'HTML', icon: <FaHtml5 /> },
-        { skill: 'CSS', icon: <FaCss3Alt /> },
-        { skill: 'JS', icon: <FaJsSquare /> },
-        { skill: 'ReactJS', icon: <FaReact /> },
-        { skill: 'Git', icon: <FaGitAlt /> },
-        { skill: 'GitHub', icon: <FaGithub /> }]
-    },
-    {
-      key: "dummy",
-      name: "Dummy Website",
-      imgSrc: "/images/portfolio.png",
-      start_date: "Aug 2025",
-      end_date: "Present",
-      for: "Me",
-      type: "Personal",
-      description:
-        "My personal portfolio showcasing projects, skills, and experiences. Built using React and styled with CSS Grid/Flexbox.",
-      github: '#',
-      live: '#',
-      skillsUsed: [
-        { skill: 'HTML', icon: <FaHtml5 /> },
-        { skill: 'CSS', icon: <FaCss3Alt /> },
-        { skill: 'JS', icon: <FaJsSquare /> },
-        { skill: 'ReactJS', icon: <FaReact /> },
-        { skill: 'Git', icon: <FaGitAlt /> },
-        { skill: 'GitHub', icon: <FaGithub /> }]
-    }
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
@@ -116,12 +77,14 @@ const Projects = () => {
               <p><strong>{obj.name}</strong></p>
               <p>{obj.type} | {obj.for}</p>
               <p>{obj.start_date} - {obj.end_date}</p>
-              <p><i>{obj.description}</i></p>
             </div>
-            <div className="skill-badges">
-              {obj.skillsUsed.map((item, i) => (
-                <span key={i} className="skill-badge">{item.icon} {item.skill}</span>
-              ))}
+            <div className="project-body">
+              <p><i>{obj.description}</i></p>
+              <div className="skill-badges">
+                {obj.skillsUsed.map((item, i) => (
+                  <span key={i} className="skill-badge">{item.icon} {item.skill}</span>
+                ))}
+              </div>
             </div>
           </div>
         ))}
@@ -144,6 +107,11 @@ const Projects = () => {
               <p><b>For:</b> {selectedProject.for}</p>
               <p><b>Duration:</b> {selectedProject.start_date} - {selectedProject.end_date}</p>
               <p>{selectedProject.description}</p>
+              <div className="skill-badges">
+                {selectedProject.skillsUsed.map((item, i) => (
+                  <span key={i} className="skill-badge">{item.icon} {item.skill}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
