@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaPython, } from "react-icons/fa";
-import { SiExpress, SiMongodb, SiGooglecloud, SiFirebase } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaPython } from "react-icons/fa";
+import { SiExpress, SiMongodb, SiGooglecloud, SiFirebase, SiTypescript, SiThreedotjs } from "react-icons/si";
 import { GoLinkExternal } from "react-icons/go";
+import { RiNextjsLine } from "react-icons/ri";
 import ytclonePic from "../images/ytclone.png";
 import ddetectPic from "../images/Picture1.png";
+import threeDEarthPic from '../images/3d-earth-visualizer (2).png'
 import "./Projects.css";
 
 const Projects = () => {
   const projects = [
     {
       key: "yt",
-      name: "Your-Tube Clone",
+      name: "You-Tube Clone",
       imgSrc: ytclonePic,
       start_date: "May 2025",
       end_date: "July 2025",
@@ -43,8 +45,6 @@ const Projects = () => {
       type: "Academic Project",
       description:
         "An AI model that classifies images and videos as real or fake based on a confidence percentage, utilizing Deep Learning for deepfake detection.",
-      github: '#',
-      live: '#',
       skillsUsed: [
         { skill: 'Python', icon: <FaPython /> },
         { skill: 'Deep Learning', icon: <FaCss3Alt /> },
@@ -52,6 +52,25 @@ const Projects = () => {
         { skill: 'ReactJS', icon: <FaReact /> },
         { skill: 'Git', icon: <FaGitAlt /> },
         { skill: 'GitHub', icon: <FaGithub /> }]
+    },
+    {
+      key: "3d-earth-visualizer",
+      name: "3D Earth Visualizer",
+      imgSrc: threeDEarthPic,
+      start_date: "November 20 2025",
+      end_date: "November 26 2025",
+      for: "",
+      type: "Personal Project",
+      description:
+        "A real-time interactive 3D visualization of global financial exchanges and cloud regions, built using Next.js, Three.js, and React Three Fiber.",
+      github: 'https://github.com/AqdasAhmed/3d-earth-visualizer',
+      live: 'https://3d-earth-visualizer.vercel.app/',
+      skillsUsed: [
+        { skill: 'Next.js', icon: <RiNextjsLine /> },
+        { skill: 'TypeScript', icon: <SiTypescript /> },
+        { skill: 'JS', icon: <FaJsSquare /> },
+        { skill: 'ThreeJS', icon: <SiThreedotjs /> },
+      ]
     },
   ];
 
@@ -70,8 +89,12 @@ const Projects = () => {
               <img src={obj.imgSrc} alt={obj.name} />
             </div>
             <div className="project-links">
-              <a href={obj.github} target="_blank" rel="noopener noreferrer" title="GitHub Repo"><FaGithub /></a>
-              <a href={obj.live} target="_blank" rel="noopener noreferrer" title="Live Project"><GoLinkExternal /></a>
+              {obj.github && (
+                <a href={obj.github} target="_blank" rel="noopener noreferrer" title="GitHub Repo"><FaGithub /></a>
+              )}
+              {obj.live && (
+                <a href={obj.live} target="_blank" rel="noopener noreferrer" title="Live Project"><GoLinkExternal /></a>
+              )}
             </div>
             <div className="project-details" onClick={() => setSelectedProject(obj)}>
               <p><strong>{obj.name}</strong></p>

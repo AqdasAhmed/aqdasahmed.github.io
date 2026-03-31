@@ -33,7 +33,8 @@
     #5bc0be 100%,
     #3a506b 120%
   );
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18),
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.18),
     0 0 0 8px rgba(91, 192, 190, 0.15);
   border: 3px solid rgba(255, 255, 255, 0.5);
   object-fit: cover;
@@ -72,12 +73,13 @@
 
 .home #myProfiles {
   margin-top: 2rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .home #myProfiles #myProfile {
@@ -98,16 +100,21 @@
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+.home #myContact {
+  display: none;
+}
+
 .home.scrolled {
-  top: 4vh;
-  left: 1vw;
+  top: -1vh;
+  left: -1vw;
   border-radius: 32px;
-  height: 80vh;
-  width: 20vw;
+  height: 90vh;
+  width: 23vw;
   position: fixed;
-  box-shadow: 0 20px 60px rgba(31, 38, 135, 0.55),
-              0 9px 30px rgba(91, 192, 190, 0.35), 
-              0 0 30px rgba(91, 192, 190, 0.3);
+  box-shadow:
+    0 5px 15px rgba(31, 38, 135, 0.55),
+    0 9px 30px rgba(91, 192, 190, 0.35),
+    0 0 30px rgba(91, 192, 190, 0.3);
   background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
   transition: all 0.7s;
   padding: 20px;
@@ -119,7 +126,7 @@
 }
 
 .home.scrolled #myNameTitles #myName {
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 1.5px;
   transition: color 0.4s;
 }
@@ -127,19 +134,57 @@
 .home.scrolled #myNameTitles #myTitles {
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .home.scrolled #myNameTitles #myTitles #myTitle {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   margin: 5px;
 }
 
+.home.scrolled #myContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  font-size: 1.1em;
+  line-height: 2;
+  color: whitesmoke;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home.scrolled #myContact a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.home.scrolled #myContact a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  transition: all 0.3s ease;
+}
+
 .home.scrolled #myProfiles {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
   margin-top: 20px;
   transition: all 0.7s;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .home.scrolled #contact-me {
@@ -170,8 +215,13 @@
   .home #myProfiles {
     font-size: 1.8rem;
   }
+
   .home #myTitles {
     font-size: 1rem;
+  }
+
+  .home #myContact {
+    font-size: 1.2rem;
   }
 
   .home.scrolled #myName {
@@ -196,8 +246,13 @@
   .home #myProfiles {
     font-size: 1.3rem;
   }
+
   .home #myTitles #myTitle {
     font-size: 0.7rem;
+  }
+
+  .home.scrolled #myContact {
+    font-size: 0.75rem;
   }
 
   .home.scrolled #myNameTitles #myName {
@@ -208,6 +263,10 @@
     font-size: 0.5rem;
   }
 
+  .home.scrolled #myProfiles {
+    font-size: 0.9rem;
+  }
+
   .home.scrolled #contact-me {
     font-size: 0.8rem;
   }
@@ -215,8 +274,8 @@
 
 @media (max-width: 768px) and (min-width: 426px) {
   .home {
-    width: 80vw;
-    left: 10vw;
+    width: 100vw;
+    left: -1vw;
   }
 
   .home #myPic {
@@ -260,6 +319,10 @@
     margin: 1px;
   }
 
+  .home.scrolled #myContact {
+    display: none;
+  }
+
   .home.scrolled #myTitles {
     flex-direction: row;
     flex-wrap: wrap;
@@ -273,8 +336,7 @@
   }
 
   .home.scrolled #myProfiles {
-    font-size: 1.1rem;
-    margin-top: 0px;
+    display: none;
   }
 
   .home.scrolled #myProfiles span {
@@ -340,6 +402,10 @@
     padding: 0.5vh;
     text-align: center;
     transition: all 0.7s;
+  }
+
+  .home.scrolled #myContact {
+    display: none;
   }
 
   .home.scrolled #myTitles #myTitle {

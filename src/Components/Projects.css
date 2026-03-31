@@ -30,7 +30,7 @@
 /* 🎯 Bento-style grid layout */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 26px;
   width: 100%;
   padding: 0 10px;
@@ -290,5 +290,10 @@
 
   .project p {
     font-size: 0.8rem;
+  }
+
+  .project .skill-badges .skill-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
   }
 }

@@ -1,4 +1,5 @@
 import { FaCodepen, FaFreeCodeCamp, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { SiCredly } from "react-icons/si";
 import { FaThreads } from "react-icons/fa6";
 import {HiMiniArrowPathRoundedSquare} from 'react-icons/hi2'
 import './Contact.css';
@@ -36,11 +37,16 @@ const Contact = ({ onUnflip }) => {
       name: 'FreeCodeCamp',
       link: 'https://www.freecodecamp.org/AqdasAhmed',
       icon: <FaFreeCodeCamp />,
+    },
+    {
+      name: 'Credly',
+      link: 'https://www.credly.com/users/aqdas-ahmed-khan',
+      icon: <SiCredly />,
     }
   ]
 
   return (
-    <div className='contact' id='container'>
+    <div className='contact' id='contact'>
       <h2 className='gradient-text'>Contact Me</h2>
       <ContactForm />
 
