@@ -10,7 +10,7 @@
 }
 
 .projects h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2rem;
   position: relative;
@@ -22,7 +22,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #5bc0be, #3aafa9);
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
   margin: 0.5rem 0;
   border-radius: 3px;
 }
@@ -30,8 +30,8 @@
 /* 🎯 Bento-style grid layout */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 7vh;
   width: 100%;
   padding: 0 10px;
 }
@@ -76,6 +76,11 @@
 /* 📄 Details */
 .project-details {
   padding: 18px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .project-body {
@@ -91,7 +96,6 @@
   transform: translateY(100%);
   transition: all 0.3s ease;
   overflow-y: scroll;
-  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,14 +145,14 @@
   height: 36px;
   border-radius: 50%;
   background: #fff;
-  color: #3aafa9;
+  color: var(--color-secondary);
   font-size: 1.2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.25s ease;
 }
 
 .project-links a:hover {
-  background: linear-gradient(135deg, #3aafa9, #2b7a78);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   color: #fff;
   transform: scale(1.1);
 }
@@ -165,17 +169,20 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #e6f7f7;
-  color: #2b7a78;
+  background: #fff;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   padding: 6px 10px;
   border-radius: 12px;
   font-size: 0.9rem;
-  transition: background 0.25s ease, transform 0.12s ease;
+  transition:
+    background 0.25s ease,
+    transform 0.12s ease;
 }
 
 .project .skill-badges .skill-badge:hover,
 .project .skill-badges .skill-badge:focus {
-  background: #3aafa9;
+  background: var(--color-secondary);
   color: #fff;
   transform: translateY(-2px);
 }
@@ -234,6 +241,88 @@
 }
 
 /* 💻 Responsiveness */
+@media (max-width: 1440px) {
+  .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 3vh;
+    width: 100%;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .projects h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 3vh;
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  .project-img {
+    height: 160px;
+  }
+
+  .project p {
+    font-size: 0.8rem;
+  }
+
+  .project p strong {
+    font-size: 0.95rem;
+  }
+
+  .project-links a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .project .skill-badges .skill-badge {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .project {
+    min-height: 250px;
+  }
+
+  .projects h2 {
+    font-size: 1.4rem;
+  }
+
+  .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3vh;
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  .project-img {
+    height: 140px;
+  }
+
+  .project p {
+    font-size: 0.7rem;
+  }
+
+  .project p strong {
+    font-size: 0.8rem;
+  }
+
+  .project-links a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .project .skill-badges .skill-badge {
+    font-size: 0.75rem;
+  }
+
+}
+
 @media (max-width: 1024px) {
   .projects h2 {
     font-size: 1.4rem;

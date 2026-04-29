@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaPython } from "react-icons/fa";
-import { SiExpress, SiMongodb, SiGooglecloud, SiFirebase, SiTypescript, SiThreedotjs } from "react-icons/si";
+import { SiExpress, SiMongodb, SiGooglecloud, SiFirebase, SiTypescript, SiThreedotjs, SiTailwindcss } from "react-icons/si";
 import { GoLinkExternal } from "react-icons/go";
 import { RiNextjsLine } from "react-icons/ri";
 import ytclonePic from "../images/ytclone.png";
 import ddetectPic from "../images/Picture1.png";
 import threeDEarthPic from '../images/3d-earth-visualizer (2).png'
+import ddeskPic from '../images/doctors-desk.png'
+import financerPic from '../images/financer.png'
 import "./Projects.css";
 
 const Projects = () => {
@@ -19,7 +21,7 @@ const Projects = () => {
       for: "NullClass",
       type: "Internship",
       description:
-        "A YouTube-like video platform with features such as video upload, HLS streaming, premium payments, and OTP verification.",
+        "A full-stack YouTube clone built with the MERN stack, featuring user authentication, video upload and streaming, real-time comments, and a responsive design for an engaging user experience. The project utilizes MongoDB for data storage, ExpressJS and NodeJS for backend development, and ReactJS for the frontend interface. Deployed on Firebase and Google Cloud Platforms (GCP) for scalability and performance.",
       github: 'https://github.com/AqdasAhmed/you_tube_clone',
       live: 'https://play-tube-clone.netlify.app/',
       skillsUsed: [
@@ -44,7 +46,7 @@ const Projects = () => {
       for: "Guru Nanak College of Arts, Science and Commerce",
       type: "Academic Project",
       description:
-        "An AI model that classifies images and videos as real or fake based on a confidence percentage, utilizing Deep Learning for deepfake detection.",
+        "A deep learning-based image classification system designed to accurately identify and categorize images into predefined classes. The project utilizes convolutional neural networks (CNNs) implemented in Python, leveraging libraries such as TensorFlow for model development and training. The system is trained on a diverse dataset of labeled images, achieving high accuracy in classification tasks. The project also incorporates data preprocessing techniques, model evaluation metrics, and optimization strategies to enhance performance.",
       skillsUsed: [
         { skill: 'Python', icon: <FaPython /> },
         { skill: 'Deep Learning', icon: <FaCss3Alt /> },
@@ -62,7 +64,7 @@ const Projects = () => {
       for: "",
       type: "Personal Project",
       description:
-        "A real-time interactive 3D visualization of global financial exchanges and cloud regions, built using Next.js, Three.js, and React Three Fiber.",
+        "A real-time interactive 3D visualization of global financial exchanges and cloud regions, built using Next.js, Three.js, and React Three Fiber. The application provides an immersive experience for users to explore financial data and cloud infrastructure across the globe, with features such as dynamic data rendering, user interaction, and responsive design for seamless access on various devices.",
       github: 'https://github.com/AqdasAhmed/3d-earth-visualizer',
       live: 'https://3d-earth-visualizer.vercel.app/',
       skillsUsed: [
@@ -70,6 +72,44 @@ const Projects = () => {
         { skill: 'TypeScript', icon: <SiTypescript /> },
         { skill: 'JS', icon: <FaJsSquare /> },
         { skill: 'ThreeJS', icon: <SiThreedotjs /> },
+      ]
+    },
+    {
+      key: "doctors-desk",
+      name: "Doctors Desk",
+      imgSrc: ddeskPic,
+      start_date: "February 20 2026",
+      end_date: "April 2 2026",
+      for: "",
+      type: "Personal Project",
+      description:
+        "A comprehensive healthcare management system that streamlines patient records, appointment scheduling, and telemedicine consultations, built using Next.js, TypeScript, Tailwind CSS, and JavaScript. The platform offers a user-friendly interface for both patients and healthcare providers, enhancing the efficiency of medical services and improving patient care.",
+      github: 'https://github.com/AqdasAhmed/DoctorsDesk',
+      live: 'https://doctors-desk-rho.vercel.app/',
+      skillsUsed: [
+        { skill: 'Next.js', icon: <RiNextjsLine /> },
+        { skill: 'TypeScript', icon: <SiTypescript /> },
+        { skill: 'Tailwind CSS', icon: <SiTailwindcss /> },
+        { skill: 'JS', icon: <FaJsSquare /> },
+      ]
+    },
+    {
+      key: "financer",
+      name: "Financer",
+      imgSrc: financerPic,
+      start_date: "November 20 2025",
+      end_date: "November 26 2025",
+      for: "",
+      type: "Personal Project",
+      description:
+        "A modern, responsive personal finance management dashboard built with Next.js and React. Track income and expenses with powerful filters, real-time charts, and actionable insights. The dashboard offers a user-friendly interface for managing budgets, visualizing financial trends, and making informed decisions about your money.",
+      github: 'https://github.com/AqdasAhmed/financer',
+      live: 'https://financer-berugsh1z-aqdasahmeds-projects.vercel.app/',
+      skillsUsed: [
+        { skill: 'Next.js', icon: <RiNextjsLine /> },
+        { skill: 'TypeScript', icon: <SiTypescript /> },
+        { skill: 'Tailwind CSS', icon: <SiTailwindcss /> },
+        { skill: 'JS', icon: <FaJsSquare /> },
       ]
     },
   ];

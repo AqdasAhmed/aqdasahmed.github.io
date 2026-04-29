@@ -17,7 +17,7 @@
   display: block;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #5bc0be, #3aafa9);
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
   margin-top: 0.5rem;
   border-radius: 3px;
 }
@@ -39,8 +39,8 @@
 }
 
 .certificate:hover {
-  box-shadow: 0 0 16px rgba(58, 175, 169, 0.3);
-  border-color: #3aafa9;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-secondary);
   transform: translateY(-4px);
 }
 
@@ -70,7 +70,6 @@
   font-size: 0.9rem;
   font-style: italic;
   text-decoration: underline;
-  color: #555;
 }
 
 .credential-btn {
@@ -82,7 +81,7 @@
   padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
-  background: #3aafa9;
+  background: var(--color-secondary);
   color: #fff;
   font-weight: 500;
   position: relative;
@@ -95,7 +94,7 @@
 }
 
 .credential-btn:hover {
-  background: #2b7a78;
+  background: var(--color-primary);
   transform: translateY(-2px);
 }
 
@@ -146,23 +145,114 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #e6f7f7;
-  color: #2b7a78;
+  background: #fff;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   padding: 6px 10px;
   border-radius: 12px;
   font-size: 0.9rem;
-  transition: background 0.25s ease, transform 0.12s ease;
+  transition:
+    background 0.25s ease,
+    transform 0.12s ease;
 }
 
 .certificate .skill-badges .skill-badge:hover,
 .certificate .skill-badges .skill-badge:focus {
-  background: #3aafa9;
+  background: var(--color-secondary);
   color: #fff;
   transform: translateY(-2px);
 }
 
 .certificate .skill-badges .skill-badge:focus {
   box-shadow: 0 0 0 3px rgba(58, 175, 169, 0.18);
+}
+
+@media (max-width: 1366px) {
+  .certificates {
+    padding: 35px 18px;
+    margin: 40px auto;
+  }
+
+  .certificates h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .certificate-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .certificate {
+    padding: 18px;
+  }
+
+  .certificate-body {
+    font-size: 0.9rem;
+  }
+
+  .certificate-header h3 {
+    font-size: 1rem;
+  }
+
+  .certificate-header .org {
+    font-size: 0.8rem;
+  }
+
+  .credential-btn {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    margin-top: 10px;
+  }
+
+  .certificate .skill-badges .skill-badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .certificates {
+    padding: 35px 18px;
+    margin: 40px auto;
+  }
+
+  .certificates h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .certificate-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .certificate {
+    padding: 16px;
+  }
+
+  .certificate-body {
+    font-size: 0.7rem;
+  }
+
+  .certificate-header h3 {
+    font-size: 0.8rem;
+  }
+
+  .certificate-header .org {
+    font-size: 0.7rem;
+  }
+
+  .credential-btn {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+    margin-top: 10px;
+  }
+
+  .certificate .skill-badges .skill-badge {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -185,9 +275,10 @@
     padding: 20px;
   }
 
-  .certificate-icon svg {
+  .certificate-icon {
     height: 10vh;
     width: 10vh;
+    color: var(--color-secondary);
   }
 
   .certificate-header h3 {
@@ -197,7 +288,7 @@
   .certificate-header .org {
     font-size: 0.8rem;
   }
-  
+
   .certificate-body {
     font-size: 0.9rem;
   }
@@ -350,7 +441,6 @@
     font-size: 0.6rem;
     padding: 3px 6px;
   }
-  
 }
 
 /* Small phones / touch devices */

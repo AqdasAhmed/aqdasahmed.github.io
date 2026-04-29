@@ -3,13 +3,14 @@ import {
 } from "react-icons/fa";
 import { SiJquery, SiRedux } from "react-icons/si";
 import { GoLinkExternal } from "react-icons/go";
+import useColorPalette from "../hooks/useColorPalette";
 import "./Certificates.css";
 
 const Certificates = () => {
   const IbmIcon = () => (
     <svg width="64" height="64" viewBox="0 0 64 64">
       <rect width="64" height="64" fill="transparent" />
-      <text x="32" y="44" textAnchor="middle" fontSize="32" fill="#006400" style={{ fontFamily: "IBM Plex Sans" }}>IBM</text>
+      <text x="32" y="44" textAnchor="middle" fontSize="32" fill="var(--color-secondary)" style={{ fontFamily: "IBM Plex Sans" }}>IBM</text>
     </svg>
   );
 
@@ -17,7 +18,7 @@ const Certificates = () => {
     {
       key: "rwd",
       name: "Responsive Web Design",
-      imgSrc: <FaFreeCodeCamp size={64} color="#006400" />, // big icon instead of image
+      imgSrc: <FaFreeCodeCamp size={64} color="var(--color-secondary)"/>, // big icon instead of image
       issue_date: "18th Aprl 2025",
       expire_date: "Does not expire",
       issuing_org: "freeCodeCamp",
@@ -33,7 +34,7 @@ const Certificates = () => {
     {
       key: "fedl",
       name: "Front End Development Libraries",
-      imgSrc: <FaFreeCodeCamp size={64} color="#006400" />, // big icon instead of image
+      imgSrc: <FaFreeCodeCamp size={64} color="var(--color-secondary)" />, // big icon instead of image
       issue_date: "6th August 2025",
       expire_date: "Does not expire",
       issuing_org: "freeCodeCamp",
@@ -52,7 +53,7 @@ const Certificates = () => {
     {
       key: "aifndmntl",
       name: "Artificial Intelligence Fundamentals",
-      imgSrc: <IbmIcon size={64} color="#006400" />,
+      imgSrc: <IbmIcon size={64} />,
       issue_date: "14th September 2025",
       expire_date: "Does not expire",
       issuing_org: "IBM SkillsBuild",
@@ -88,7 +89,7 @@ const Certificates = () => {
             key={obj.key}
           >
             <div className="certificate-header">
-              <div className="certificate-icon">{obj.imgSrc}</div>
+              {obj.imgSrc}
               <div>
                 <h3><a href={obj.course_link} target="_blank" rel="noopener noreferrer">{obj.name}</a></h3>
                 <a href={obj.org_link} className="org" target="_blank" rel="noopener noreferrer">{obj.issuing_org}</a>

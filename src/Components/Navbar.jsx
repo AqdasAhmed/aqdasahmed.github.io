@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import useScrollStep from "../hooks/useScrollStep";
+import useColorPalette from "../hooks/useColorPalette";
 
 const Navbar = () => {
   const scrollStep = useScrollStep(10, 5);
   const [activeLink, setActiveLink] = useState("top");
   const [isOpen, setIsOpen] = useState(false);
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const { currentPalette, switchPalette, palettes } = useColorPalette();
 
   useEffect(() => {
     const sections = ["top", "mySelf", "skill", "project", "certificate"];
@@ -42,6 +45,36 @@ const Navbar = () => {
   return (
     <>
       <div id="top"></div>
+
+      {/* Palette Switcher Button */}
+      <div className="palette-switcher">
+        <button
+          className="palette-btn"
+          onClick={() => setPaletteOpen(!paletteOpen)}
+          title="Switch color palette"
+        >
+        </button>
+        {paletteOpen && (
+          <div className="palette-menu">
+            {Object.entries(palettes).map(([key, palette]) => (
+              <button
+                key={key}
+                className={`palette-option ${currentPalette === key ? "active" : ""}`}
+                onClick={() => {
+                  switchPalette(key);
+                  setPaletteOpen(false);
+                }}
+                title={palette.name}
+              >
+                <span className="palette-preview" style={{
+                  background: `linear-gradient(135deg, ${palette.primary} 0%, ${palette.secondary} 100%)`
+                }}></span>
+                {/* {palette.name} */}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
 
       {/* Hamburger Button */}
       <div className={`nav-btn ${isOpen ? "open" : ""}`} onClick={toggleNavbar}>

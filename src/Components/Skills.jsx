@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaBootstrap, FaGithub } from "react-icons/fa";
-import { SiExpress, SiMongodb, SiGooglecloud, SiFirebase } from "react-icons/si";
+import { SiExpress, SiMongodb, SiGooglecloud, SiFirebase, SiTypescript, SiTailwindcss } from "react-icons/si";
 import { GrMysql } from 'react-icons/gr';
 import './Skills.css'
 
@@ -19,6 +19,8 @@ const Skills = () => {
     { key: 'firebase', name: 'Firebase', imgSrc: <SiFirebase />, for: 'cloud' },
     { key: 'git', name: 'Git', imgSrc: <FaGitAlt />, for: 'version control' },
     { key: 'github', name: 'GitHub', imgSrc: <FaGithub />, for: 'version control' },
+    { key: 'typescript', name: 'TypeScript', imgSrc: <SiTypescript />, for: 'frontend' },
+    { key: 'tailwind', name: 'Tailwind CSS', imgSrc: <SiTailwindcss />, for: 'frontend' },
   ];
 
   // Group skills by "for"

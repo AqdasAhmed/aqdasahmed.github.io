@@ -7,12 +7,10 @@
   width: 100vw;
   top: 0vh;
   left: 0vw;
-  /* border-radius: 32px; */
-  /* background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); */
-  /* background: linear-gradient(135deg, #232946 0%, #1a223f 100%); */
-  background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   flex-wrap: wrap;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.15);
   transition: all 0.7s ease-in-out;
   color: whitesmoke;
   position: relative;
@@ -25,13 +23,11 @@
 
 .home #myPic {
   border-radius: 50%;
-  /* box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
-  background: radial-gradient(circle at 60% 40%, #e0e7ef 60%, #5bc0be 100%); */
   background: radial-gradient(
     circle at 60% 40%,
     #fff 60%,
-    #5bc0be 100%,
-    #3a506b 120%
+    var(--color-secondary) 100%,
+    var(--color-primary) 120%
   );
   box-shadow:
     0 8px 32px 0 rgba(31, 38, 135, 0.18),
@@ -79,7 +75,11 @@
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
-  padding-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .home #myProfiles #myProfile {
@@ -105,28 +105,28 @@
 }
 
 .home.scrolled {
+  position: fixed;
   top: -1vh;
   left: -1vw;
   border-radius: 32px;
   height: 90vh;
-  width: 23vw;
-  position: fixed;
+  width: 27vw;
   box-shadow:
     0 5px 15px rgba(31, 38, 135, 0.55),
     0 9px 30px rgba(91, 192, 190, 0.35),
     0 0 30px rgba(91, 192, 190, 0.3);
-  background: linear-gradient(135deg, #3a506b 0%, #5bc0be 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   transition: all 0.7s;
   padding: 20px;
 }
 
 .home.scrolled #myPic {
-  width: 7vw;
-  height: 7vw;
+  width: 10vw;
+  height: 10vw;
 }
 
 .home.scrolled #myNameTitles #myName {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   letter-spacing: 1.5px;
   transition: color 0.4s;
 }
@@ -139,7 +139,7 @@
 }
 
 .home.scrolled #myNameTitles #myTitles #myTitle {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin: 5px;
 }
 
@@ -148,14 +148,12 @@
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  top: 10px;
-  left: 10px;
   padding: 5px;
-  font-size: 1.1em;
+  font-size: 1.3em;
   line-height: 2;
   color: whitesmoke;
   background: rgba(255, 255, 255, 0.1);
-  margin: 10px 0;
+  margin: 30px 0;
   padding: 10px 15px;
   border-radius: 10px;
   text-decoration: none;
@@ -207,13 +205,37 @@
   display: inline;
 }
 
+@media (max-width: 1680px) {
+  .home #myPic {
+    width: 14vw;
+    height: 14vw;
+  }
+
+  .home #myName {
+    font-size: 2rem;
+  }
+
+  .home #myTitles {
+    font-size: 0.8rem;
+  }
+
+  .home #myProfiles {
+    font-size: 1.3rem;
+    gap: 1rem;
+  }
+
+  .home.scrolled #myContact {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 1440px) {
   .home #myName {
     font-size: 2rem;
   }
 
   .home #myProfiles {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 
   .home #myTitles {
@@ -224,31 +246,97 @@
     font-size: 1.2rem;
   }
 
-  .home.scrolled #myName {
+  .home.scrolled #myNameTitles #myName {
     font-size: 1.3rem;
   }
 
-  .home.scrolled #myTitles #myTitle {
+  .home.scrolled #myNameTitles #myTitles #myTitle {
+    font-size: 0.8rem;
+  }
+
+  .home.scrolled #myContact {
+    font-size: 1rem;
+  }
+
+  .home.scrolled #myProfiles {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .home.scrolled {
+    width: 25vw;
+  }
+
+  .home.scrolled #myNameTitles #myName {
+    font-size: 1.2rem;
+  }
+
+  .home.scrolled #myNameTitles #myTitles #myTitle {
+    font-size: 0.7rem;
+  }
+
+  .home.scrolled #myContact {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .home #myPic {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  .home #myName {
+    font-size: 1.8rem;
+  }
+
+  .home #myTitles #myTitle {
+    font-size: 0.8rem;
+  }
+
+  .home #myProfiles {
+    font-size: 1.2rem;
+  }
+
+  .home.scrolled {
+    width: 26vw;
+  }
+
+  .home.scrolled #myNameTitles #myName {
+    font-size: 1.1rem;
+  }
+
+  .home.scrolled #myNameTitles #myTitles #myTitle {
+    font-size: 0.6rem;
+  }
+
+  .home.scrolled #myContact {
     font-size: 0.8rem;
   }
 }
 
 @media (max-width: 1024px) {
   .home #myPic {
-    width: 9vw;
-    height: 9vw;
+    width: 12vw;
+    height: 12vw;
   }
 
   .home #myName {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .home #myProfiles {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .home #myTitles #myTitle {
     font-size: 0.7rem;
+  }
+
+  .home.scrolled {
+    width: 25vw;
+    left: -1.5vw;
   }
 
   .home.scrolled #myContact {

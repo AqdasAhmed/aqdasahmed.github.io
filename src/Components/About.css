@@ -7,7 +7,7 @@
 }
 
 .about p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1rem;
   color: #444;
@@ -42,7 +42,7 @@
   display: block;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #5bc0be, #3aafa9);
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
   margin-top: 0.5rem;
   border-radius: 3px;
 }
@@ -62,7 +62,7 @@
   top: 0;
   bottom: 0;
   width: 0.2rem;
-  background: linear-gradient(180deg, #5bc0be, #3aafa9);
+  background: linear-gradient(180deg, var(--color-secondary), var(--color-primary));
   border-radius: 0.15rem;
 }
 
@@ -83,9 +83,9 @@
 .timeline-dot {
   width: 1.1rem;
   height: 1.1rem;
-  background: #5bc0be;
+  background: var(--color-secondary);
   border: 0.2rem solid #fff;
-  box-shadow: 0px 0px 0.4rem rgba(91, 192, 190, 0.6);
+  box-shadow: 0px 0px 0.4rem var(--color-secondary);
   border-radius: 50%;
   position: absolute;
   left: -1.85rem;
@@ -99,11 +99,13 @@
   border-radius: 0.6rem;
   box-shadow: 0px 0.4rem 0.8rem rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  border: 1px solid #eee;
 }
 
 .timeline-content:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0px 0.6rem 1.1rem rgba(0, 0, 0, 0.12);
+  transform: translateY(-0.1rem);
+  box-shadow: 0px 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-secondary);
 }
 
 .timeline-content h3 {
@@ -131,17 +133,20 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #e6f7f7;
-  color: #2b7a78;
+  background: #fff;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   padding: 6px 10px;
   border-radius: 12px;
   font-size: 0.9rem;
-  transition: background 0.25s ease, transform 0.12s ease;
+  transition:
+    background 0.25s ease,
+    transform 0.12s ease;
 }
 
 .about .timeline-content .skill-badge:hover,
 .about .timeline-content .skill-badge:focus {
-  background: #3aafa9;
+  background: var(--color-secondary);
   color: #fff;
   transform: translateY(-2px);
   outline: none;
@@ -175,8 +180,114 @@
 
 /* Media Queries for Responsive Font Sizes */
 @media (max-width: 1440px) {
-  .timeline{
+  .about p {
+    font-size: 1rem;
+  }
+
+  .timeline {
     width: 90%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .about p {
+    font-size: 0.95rem;
+  }
+
+  #mySelf p:first-child {
+    font-size: 1.5rem;
+  }
+
+  #myEdu h2,
+  #myExp h2 {
+    font-size: 1.5rem;
+  }
+
+  .timeline-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    left: -1.25rem;
+  }
+
+  .timeline {
+    width: 90%;
+    padding-left: 1.5rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.8rem;
+  }
+
+  .about .timeline-content .skill-badges {
+    gap: 8px;
+    margin-top: 12px;
+    padding: 0;
+  }
+
+  .about .timeline-content .skill-badge {
+    gap: 6px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .about .timeline-content .skill-badge svg {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .about p {
+    font-size: 0.8rem;
+  }
+
+  #mySelf p:first-child {
+    font-size: 1.3rem;
+  }
+
+  #myEdu h2,
+  #myExp h2 {
+    font-size: 1.3rem;
+  }
+
+  .timeline-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    left: -1.25rem;
+  }
+
+  .timeline {
+    width: 90%;
+    padding-left: 1.5rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 0.8rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.7rem;
+  }
+
+  .about .timeline-content .skill-badges {
+    gap: 6px;
+    margin-top: 12px;
+    padding: 0;
+  }
+
+  .about .timeline-content .skill-badge {
+    gap: 5px;
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+
+  .about .timeline-content .skill-badge svg {
+    width: 0.7rem;
+    height: 0.7rem;
   }
 }
 
@@ -291,7 +402,7 @@
   }
 
   .timeline-dot {
-    left: -1.8rem;
+    left: -1.2rem;
   }
 
   .timeline-content {
